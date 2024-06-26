@@ -1,7 +1,7 @@
-import { For, createSignal } from "solid-js";
+import { For, createSignal } from "solid-js"
 
 export default function Home() {
-  const [items, setItems] = createSignal<string[]>(["foo", "bar", "baz"]);
+  const [items, setItems] = createSignal<string[]>(["foo", "bar", "baz"])
 
   return (
     <main class="mx-auto p-4 text-center text-gray-700">
@@ -10,8 +10,8 @@ export default function Home() {
         placeholder="Add an item"
         onKeyPress={(e) => {
           if (e.key === "Enter" && e.currentTarget.value.trim()) {
-            setItems((items) => [...items, e.currentTarget.value]);
-            e.currentTarget.value = "";
+            setItems((items) => [...items, e.currentTarget.value])
+            e.currentTarget.value = ""
           }
         }}
       />
@@ -47,5 +47,5 @@ export default function Home() {
         </For>
       </ul>
     </main>
-  );
+  )
 }
