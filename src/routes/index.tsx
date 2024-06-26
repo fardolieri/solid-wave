@@ -1,7 +1,8 @@
-import { For, createSignal } from "solid-js"
+import { For } from "solid-js"
+import { createLocalStore } from "../../utils/create-local-store"
 
-export default function Home() {
-  const [items, setItems] = createSignal<string[]>(["foo", "bar", "baz"])
+export default function TodoList() {
+  const [todos, setTodos] = createLocalStore<string[]>("todo list", [])
 
   return (
     <main class="mx-auto p-4 text-center text-gray-700">
@@ -10,22 +11,20 @@ export default function Home() {
         placeholder="Add an item"
         onKeyPress={(e) => {
           if (e.key === "Enter" && e.currentTarget.value.trim()) {
-            setItems((items) => [...items, e.currentTarget.value])
+            setTodos((items) => [...items, e.currentTarget.value])
             e.currentTarget.value = ""
           }
         }}
       />
 
       <ul class="flex flex-col items-center gap-2">
-        <For each={items()}>
+        <For each={todos}>
           {(item) => (
             <li class="flex items-center gap-2">
               {item}
               <button
                 class="p-1 hover:bg-gray-100"
-                onClick={() =>
-                  setItems((items) => items.filter((i) => i !== item))
-                }
+                onClick={() => setTodos(todos.filter((i) => i !== item))}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
