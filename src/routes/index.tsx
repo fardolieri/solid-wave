@@ -1,8 +1,8 @@
-import { For } from "solid-js"
-import { createLocalStore } from "../../utils/create-local-store"
+import { For } from 'solid-js'
+import { createLocalStore } from '../../utils/create-local-store'
 
 export default function TodoList() {
-  const [todos, setTodos] = createLocalStore<string[]>("todo list", [])
+  const [todos, setTodos] = createLocalStore<string[]>('todo list', [])
 
   return (
     <main class="mx-auto p-4 text-center text-gray-700">
@@ -10,9 +10,9 @@ export default function TodoList() {
         type="text"
         placeholder="Add an item"
         onKeyPress={(e) => {
-          if (e.key === "Enter" && e.currentTarget.value.trim()) {
+          if (e.key === 'Enter' && e.currentTarget.value.trim()) {
             setTodos((items) => [...items, e.currentTarget.value])
-            e.currentTarget.value = ""
+            e.currentTarget.value = ''
           }
         }}
       />
