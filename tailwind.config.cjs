@@ -4,6 +4,10 @@ module.exports = {
   content: ['src/routes/**/*.{ts,tsx}', 'src/components/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
+    fontFamily: {
+      heading: 'var(--font-heading)',
+      body: 'var(--font-body)',
+    },
     container: {
       center: true,
       padding: '2rem',

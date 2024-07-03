@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,6 +35,54 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* Daylight */
+    --font-heading: 'DM Sans', sans-serif;
+    --font-body: 'Space Mono', monospace;
+    --radius: 0;
+    --background: 36 39% 88%;
+    --foreground: 36 45% 15%;
+    --primary: 36 45% 70%;
+    --primary-foreground: 36 45% 11%;
+    --secondary: 40 35% 77%;
+    --secondary-foreground: 36 45% 25%;
+    --accent: 36 64% 57%;
+    --accent-foreground: 36 72% 17%;
+    --muted: 36 33% 75%;
+    --muted-foreground: 36 45% 25%;
+    --card: 36 46% 82%;
+    --card-foreground: 36 45% 20%;
+    --destructive: 0 84% 37%;
+    --destructive-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --border: 36 45% 60%;
+    --input: 36 45% 60%;
+    --ring: 36 45% 30%;
+
+    /* Deep Sea */
+    /* --font-heading: 'Bricolage Grotesque', sans-serif;
+    --font-body: 'Space Mono', monospace;
+    --radius: 0;
+    --background: 210 100% 6%;
+    --foreground: 180 100% 90%;
+    --primary: 200 100% 28%;
+    --primary-foreground: 180 100% 90%;
+    --secondary: 203 23% 30%;
+    --secondary-foreground: 180 100% 90%;
+    --accent: 198 70% 50%;
+    --accent-foreground: 185 10% 13%;
+    --muted: 200 50% 30%;
+    --muted-foreground: 180 100% 90%;
+    --card: 210 100% 12%;
+    --card-foreground: 180 100% 90%;
+    --destructive: 0 98% 44%;
+    --destructive-foreground: 0 0% 100%;
+    --popover: 210 100% 15%;
+    --popover-foreground: 180 100% 90%;
+    --border: 210 50% 40%;
+    --input: 210 50% 40%;
+    --ring: 180 100% 90%; */
   }
 
   [data-kb-theme='dark'] {
@@ -71,6 +121,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply font-body bg-background text-foreground;
   }
 }
