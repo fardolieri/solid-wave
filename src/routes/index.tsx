@@ -1,5 +1,5 @@
 import { For } from 'solid-js'
-import { createLocalStore } from '../../utils/create-local-store'
+import { createLocalStore } from '../utils/create-local-store'
 
 export default function TodoList() {
   const [todos, setTodos] = createLocalStore<string[]>('todo list', [])
