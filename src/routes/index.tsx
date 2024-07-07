@@ -1,3 +1,3 @@
-import ChatApp from '~/components/ChatApp'
+import ChatApp from '~/components/chat-app/chat-app'
 
 export default ChatApp

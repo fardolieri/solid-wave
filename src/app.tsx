@@ -1,9 +1,9 @@
 import { Router } from '@solidjs/router'
 import { FileRoutes } from '@solidjs/start/router'
 import { Suspense } from 'solid-js'
+import { ColorModeScript, ColorModeProvider } from '@kobalte/core'
 
 import './app.css'
-import { ColorModeScript, ColorModeProvider } from '@kobalte/core'
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
         <>
           <Suspense>
             <ColorModeScript />
-            <ColorModeProvider initialColorMode="light">
+            <ColorModeProvider initialColorMode="dark">
               {props.children}
             </ColorModeProvider>
           </Suspense>
